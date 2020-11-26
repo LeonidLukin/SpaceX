@@ -1,23 +1,32 @@
+import React from 'react'; 
+import Header from './components/Header/Header';
+import Main from './components/Main/Main';
+import Features from './components/Features/Features';
+import Footer from './components/Footer/Footer';
+import Calendar from './components/Calendar/Calendar';
+// import Details from './components/Details/Details';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          L7
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// import RelaxWrapper from 'react-rellax-wrapper';
+import { ParallaxProvider } from 'react-scroll-parallax';
+
+import './style.css';
+
+class App extends React.Component {
+  
+  render() {
+    return (
+      <>
+        <ParallaxProvider scrollAxis="vertical">
+          <Header />
+          <Main />
+          <Features />
+          <Footer />
+          <Calendar />
+          {/* <Details /> */}
+        </ParallaxProvider>
+      </>
+    );
+  }  
 }
 
 export default App;
