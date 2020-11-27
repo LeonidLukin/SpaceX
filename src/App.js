@@ -58,7 +58,7 @@ class App extends React.Component {
           <Header rockets={this.state.rockets} changeRocket={this.changeRocket}/>
           <Main rocket={this.state.rocket} />
           {this.state.rocketFeatures && <Features {...this.state.rocketFeatures} />}
-          <Footer />
+          {this.state.company && <Footer {...this.state.company} />}
           {/* <Calendar /> */}
           {/* <Details /> */}
         </ParallaxProvider>
